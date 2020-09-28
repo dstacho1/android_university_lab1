@@ -45,7 +45,7 @@ public class BestSellerBooksRecyclerViewAdapter extends RecyclerView.Adapter<Bes
         holder.mBookId.setText(ranking);
 
         holder.mBookDescription.setText(books.get(position).description);
-        String amazonUrl = String.format("%sBuy on Amazon", books.get(position).amazonUrl);
+        String amazonUrl = String.format("%s", books.get(position).amazonUrl);
         holder.mBuyButton.setText(amazonUrl);
 
 
@@ -91,7 +91,7 @@ public class BestSellerBooksRecyclerViewAdapter extends RecyclerView.Adapter<Bes
             mView = view;
             mBookTitle = (TextView) view.findViewById(R.id.book_title);
             mBookAuthor = (TextView) view.findViewById(R.id.book_author);
-            mBookId = (TextView) view.findViewById(R.id.book_id);
+            mBookId = (TextView) view.findViewById(R.id.ranking);
             mBookImage = (ImageView) view.findViewById(R.id.book_image);
             mBookDescription = (TextView) view.findViewById(R.id.book_description);
             mBuyButton = (Button) view.findViewById(R.id.buy_button);
